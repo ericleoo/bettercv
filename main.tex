@@ -19,6 +19,9 @@
 \usepackage{geometry}
 \usepackage{ragged2e}
 \usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{outlines}
+
 \geometry{
   body={6.5in, 8.5in},
   left=1.0in,
@@ -58,6 +61,13 @@
   }
 }
 
+\newcommand{\resumeSubheadingOneline}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -66,14 +76,24 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    #1
+  }
+}
+
 
 \renewcommand{\labelitemii}{$\circ$}
+
+
+\newlist{SubItemList}{itemize}{1}
+\setlist[SubItemList]{label={$-$}}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,7 +103,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Large Eric Leonardo Lim}} & Email : \href{mailto:ericleonardo@protonmail.ch}{ericleonardo@protonmail.ch} \\ 
+  \textbf{{\Large Eric Leonardo Lim}} & Email : \href{mailto:elim023@e.ntu.edu.sg}{elim023@e.ntu.edu.sg} \\ 
   952 Jurong West Street 91 \#08-725, Singapore, 640952 & Mobile : +65-8317-5965\\
 \end{tabular*}
 
@@ -92,60 +112,105 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Nanyang Technological University}{Singapore}
-      {Bachelor of Engineering in Computer Science with Minor in Mathematics;  CGPA: 4.49/5.0}{Aug. 2014 -- May. 2018}
+      {Nanyang Technological University}{August 2014 -- May 2018}
+      {Bachelor of Engineering in Computer Science with Minor in Mathematics;  CGPA: 4.49/5.0}{Singapore}
   \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
-\section{Employment}
+\section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
+      {Data Scientist Intern}{January 2017 -- May 2017}
       {SAP}{Singapore}
-      {Data Scientist Intern}{Jan 2017 - May 2017}
-      \resumeItemListStart
-        \resumeItem{Job \& Resume Matcher}
-        
-          \begin{itemize}[leftmargin=*]
-            \item Contributed into the development of the back-end of a recommendation engine that recommends resumes/job descriptions given a raw job description/resume document.
-            \item Researched and developed Machine Learning models for various microservices within the recommendation engine, such as job category/industry classifier, job standardization, location classifier, etc.
-          \end{itemize}
-          
-      \resumeItemListEnd
-
+      
+      \begin{outline}
+         \1 Researched and developed Machine Learning models in Python for a job and resume recommendation engine.
+         \vspace{-4pt}
+         \1 Extracted features from raw documents such as resumes and job descriptions for the Machine Learning models.
+        \end{outline}
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{HiveIO}
-      {A multi-player tower conquering game developed at \href{http://hacknroll.nushackers.org/}{NUS Hack N' Roll 2018}. The game is developed in Python and Javascript and is deployed at \url{https://hiveio.herokuapp.com}.}
-    \resumeSubItem{Quora Question Pairs Classifier}
+    \resumeSubheadingOneline{HiveIO}{February 2018}      
+        \begin{outline}
+        \1 Developed a multi-player tower conquering game from scratch with Python, HTML5, and Javascript at \href{http://hacknroll.nushackers.org/}{NUS Hack N' Roll 2018}.
+        \end{outline}
+
+      
+    \resumeSubheadingOneline{\href{https://www.kaggle.com/c/quora-question-pairs}{Quora Question Pairs}}{April 2017 -- May 2017}
       {
-      A deep learning model developed for the \href{https://www.kaggle.com/c/quora-question-pairs}{Quora Question Pairs} challenge hosted at Kaggle. The model takes two different questions as input and predicts whether they are essentially just duplicates. The model is placed amongst the top 25\% in the final leaderboard.
+        \begin{outline}
+         \1 Participated in a Data Science challenge hosted on Kaggle in which participants are to develop a model that given a dataset that consists of pairs of questions, predicts whether they are essentially just duplicates of one another.
+         \vspace{-4pt}
+         \1 Developed a custom Bidirectional-LSTM network in Python to solve the challenge.
+         \vspace{-4pt}
+         \1 Attained a top 25\% place in the final leaderboard.
+        \end{outline}
       }
-    \resumeSubItem{Curator}
+    \resumeSubheadingOneline{Multi-Disciplinary Project}{August 2016 -- December 2016}
+        \begin{outline}
+            \1 Collaborated with 1 Computer Engineering student and 7 Computer Science students to build a maze-solving robot.
+            \vspace{-4pt}
+            \1 Developed the algorithm of the robot.
+        \end{outline}
+      
+    \resumeSubheadingOneline{Curator}{January 2016 -- April 2016}
       {
-      An Android application that provides general information and events of museums in Singapore. The application uses Google Place API.
+        \begin{outline}
+         \1 Developed an Android application that provides general information and events of museums in Singapore. The application uses Google Place API.
+        \end{outline}
       }
   \resumeSubHeadingListEnd
   
 \section{Awards}
   \resumeSubHeadingListStart
-    \resumeSubItem{$2^{nd}$ Place at \href{https://icpc.baylor.edu/regionals/finder/ar-yangon-2017}{The ACM International Collegiate Programming Contest (ICPC) Asia Yangon Regional 2017}}
-      {\\An international team-based 5-hour programming contest consisted of teams from top universities in West Pacific and South East Asia as participants.}
+    \resumeItem{$2^{nd}$ Place at \href{https://icpc.baylor.edu/regionals/finder/ar-yangon-2017}{The ACM International Collegiate Programming Contest (ICPC) Asia Yangon Regional 2017}}
+      {
+      \begin{outline}
+       \vspace{-4pt}
+       \1 Participated in an international team-based 5-hour algorithmic programming contest consisted of teams from top universities in West Pacific and South East Asia as participants.
+       \vspace{-4pt}
+       \1 Topics of problems include dynamic programming, graphs, advanced data structures (e.g. segment tree, fenwick tree), and mathematics.
+       \vspace{-4pt}
+       \1 Won the 2nd place.
+       \vspace{-4pt}
+      \end{outline}
+      }
   \resumeSubHeadingListEnd
+
+\section{Co-Curricular Activities}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Logistics Officer}{August 2015 -- May 2016}
+      {NTU Catholic Students Apostolate - Charismatic Prayer Group}{}
+        \begin{outline}
+         \1 Responsible for event room booking \& preparation.
+        \end{outline}
+    \resumeSubheading
+      {IT Officer}{August 2014 -- May 2015}
+      {NTU Brainteractive Club}{}
+        \begin{outline}
+         \vspace{-4pt}
+         \1 Built a new website for the club using WordPress.
+         \vspace{-4pt}
+         \1 Maintained the website.
+         \vspace{-4pt}
+        \end{outline}
+\resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \item{
-      \textbf{Languages}{: C++, Python, Java, Javascript}\\
+      \textbf{Languages}{: C++, Python, Java, Javascript, SQL}\\
     }
     \item{
-    \textbf{Technologies}{: Linux, Unity, Google Cloud Engine, Keras, Scikit-Learn, Node.JS, NLTK, LaTeX}
+    \textbf{Technologies}{: Linux, LaTeX, Google Cloud Engine, Keras, Scikit-Learn, Numpy, Pandas, NLTK, Unity, Node.JS}
     }
   \resumeSubHeadingListEnd
 
