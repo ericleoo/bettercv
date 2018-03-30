@@ -4,8 +4,9 @@
 % License : MIT
 %------------------------
 
-%\documentclass[letterpaper,11pt]{article}
-\documentclass[letterpaper]{article}
+\documentclass[letterpaper,12pt]{article}
+%\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
 \usepackage{latexsym}
 %\usepackage{hyperref}
 \usepackage[empty]{fullpage}
@@ -113,7 +114,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Nanyang Technological University}{August 2014 -- May 2018}
-      {Bachelor of Engineering in Computer Science with Minor in Mathematics;  CGPA: 4.49/5.0}{Singapore}
+      {Bachelor of Engineering (Computer Science) with Minor in Mathematics}{Singapore}
+      \begin{outline}
+          \1 CGPA: 4.49/5.0
+      \end{outline}
   \resumeSubHeadingListEnd
 
 
@@ -122,36 +126,40 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Data Scientist Intern}{January 2017 -- May 2017}
+      {Research Intern}{January 2017 -- May 2017}
       {SAP}{Singapore}
       
       \begin{outline}
-         \1 Researched and developed Machine Learning models in Python for a job and resume recommendation engine.
+         \1 Researched and developed Machine Learning models (NLP/Text-Mining) in Python.
          \vspace{-4pt}
-         \1 Extracted features from raw documents such as resumes and job descriptions for the Machine Learning models.
         \end{outline}
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
 \section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubheadingOneline{HiveIO}{February 2018}      
+\resumeSubHeadingListStart
+  \resumeSubheadingOneline{Final Year Project}{August -- May 2018}
+        \begin{outline}
+        \1 Researched about a summary data structure for graph data stream and implemented in C++.
+        \end{outline}
+        
+  \resumeSubheadingOneline{HiveIO}{February 2018}
         \begin{outline}
         \1 Developed a multi-player tower conquering game from scratch with Python, HTML5, and Javascript at \href{http://hacknroll.nushackers.org/}{NUS Hack N' Roll 2018}.
         \end{outline}
 
       
     \resumeSubheadingOneline{\href{https://www.kaggle.com/c/quora-question-pairs}{Quora Question Pairs}}{April 2017 -- May 2017}
-      {
-        \begin{outline}
+      
+    \begin{outline}
          \1 Participated in a Data Science challenge hosted on Kaggle in which participants are to develop a model that given a dataset that consists of pairs of questions, predicts whether they are essentially just duplicates of one another.
          \vspace{-4pt}
          \1 Developed a custom Bidirectional-LSTM network in Python to solve the challenge.
          \vspace{-4pt}
          \1 Attained a top 25\% place in the final leaderboard.
         \end{outline}
-      }
+      
     \resumeSubheadingOneline{Multi-Disciplinary Project}{August 2016 -- December 2016}
         \begin{outline}
             \1 Collaborated with 1 Computer Engineering student and 7 Computer Science students to build a maze-solving robot.
@@ -173,7 +181,7 @@
       {
       \begin{outline}
        \vspace{-4pt}
-       \1 Participated in an international team-based 5-hour algorithmic programming contest consisted of teams from top universities in West Pacific and South East Asia as participants.
+       \1 Participated in an international team-based 5-hour algorithmic programming contest (in C++) consisted of teams from top universities in West Pacific and South East Asia as participants.
        \vspace{-4pt}
        \1 Topics of problems include dynamic programming, graphs, advanced data structures (e.g. segment tree, fenwick tree), and mathematics.
        \vspace{-4pt}
@@ -192,7 +200,7 @@
          \1 Responsible for event room booking \& preparation.
         \end{outline}
     \resumeSubheading
-      {IT Officer}{August 2014 -- May 2015}
+      {IT Director}{August 2014 -- May 2015}
       {NTU Brainteractive Club}{}
         \begin{outline}
          \vspace{-4pt}
@@ -205,15 +213,24 @@
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: C++, Python, Java, Javascript, SQL}\\
-    }
-    \item{
-    \textbf{Technologies}{: Linux, LaTeX, Google Cloud Engine, Keras, Scikit-Learn, Numpy, Pandas, NLTK, Unity, Node.JS}
-    }
+\resumeSubHeadingListStart
+\item{
+  \textbf{Languages}{: C++, Python, Java, Javascript, SQL}\\
+}
+\item{
+  \textbf{Technologies}{: Linux, LaTeX, Google Cloud Engine, Jupyter Notebook, Keras, Scikit-Learn, Numpy, Pandas, NLTK, Unity}
+}
   \resumeSubHeadingListEnd
 
+\section{Miscellaneous}
+\resumeSubHeadingListStart
+\item{
+  \textbf{Expected salary}{: S\$3800 (Median salary according to Graduate Employment Survey 2017)}\\
+}
+\item{
+  \textbf{Availability to commence work}{: 21 June 2018}
+}
+  \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
